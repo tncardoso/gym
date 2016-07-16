@@ -470,3 +470,13 @@ register(
     entry_point='gym.envs.safety:OffSwitchCartpoleProbEnv',
     timestep_limit=200,
 )
+
+# QWOP
+# ----------------------------------------
+
+register(
+    id='Qwop-v0',
+    entry_point='gym.envs.qwop:QwopEnv',
+    timestep_limit=200,
+    reward_threshold=195.0,
+)
