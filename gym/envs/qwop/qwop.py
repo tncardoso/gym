@@ -24,6 +24,7 @@ ACTION_MEANING = {
     12: 'QOP',
     13: 'WOP',
     14: 'QWOP',
+    15: 'NTHING',
 }
 
 class QwopEnv(gym.Env):
@@ -38,7 +39,7 @@ class QwopEnv(gym.Env):
 
         self._width = 80
         self._height = 50
-        self.action_space = spaces.Discrete(4)
+        self.action_space = spaces.Discrete(len(ACTION_MEANING))
         self.observation_space = spaces.Box(low=0, high=255,
                 shape=(self._height, self._width))
 
@@ -80,7 +81,6 @@ class QwopEnv(gym.Env):
         for y in range(screen.height):
             for x in range(screen.width):
                 ix = (y * screen.width) + x
-                print x, y, ix, screen.height, screen.width
                 arr[y,x] = screen.pixels[ix]
         return (arr, screen.finished)
 

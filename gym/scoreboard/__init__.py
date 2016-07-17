@@ -83,6 +83,12 @@ add_group(
     description='Environments to test various AI safety properties.'
 )
 
+add_group(
+    id='qwop',
+    name='Qwop',
+    description='Run like a pro.',
+)
+
 # classic control
 
 add_task(
@@ -1295,6 +1301,13 @@ Scalable oversight of RL systems may require a solution to this challenge [Amode
 """
 )
 
+# QWOP
+
+add_task(
+    id='Qwop-v0',
+    summary="Learn how to run.",
+    group='qwop',
+)
 
 
 # Deprecated
