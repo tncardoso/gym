@@ -60,6 +60,8 @@ class QwopEnv(gym.Env):
         self._score = 0.0
         keys = qwop_pb2.Keys(r=True)
         self._stub.Click(keys, self._timeout)
+        (ob, is_over) = self._get_obs()
+        return ob
 
     def _click(self, code):
         meaning = ACTION_MEANING[code]
