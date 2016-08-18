@@ -13,18 +13,11 @@ ACTION_MEANING = {
     1: 'W',
     2: 'O',
     3: 'P',
-    4: 'QW',
-    5: 'QO',
-    6: 'QP',
-    7: 'WO',
-    8: 'WP',
-    9: 'OP',
-    10: 'QWO',
-    11: 'QWP',
-    12: 'QOP',
-    13: 'WOP',
-    14: 'QWOP',
-    15: 'NTHING',
+    4: 'QO',
+    5: 'QP',
+    6: 'WO',
+    7: 'WP',
+    8: 'NTHING',
 }
 
 class QwopEnv(gym.Env):
