@@ -80,15 +80,11 @@ class QwopEnv(gym.Env):
         return (arr, screen.finished)
 
     def _step(self, action):
-        reward = 0.0
-        num_steps = self.np_random.randint(2, 5)
-        for _ in range(num_steps):
-            self._click(action)
-            new_score = self._get_score()
-            reward += new_score - self._score
-            self._score = new_score
+        self._click(action)
+        new_score = self._get_score()
+        reward = new_score - self._score
+        self._score = new_score
         (ob, is_over) = self._get_obs()
-
         return ob, reward, is_over, {}
 
 if __name__ == '__main__':
